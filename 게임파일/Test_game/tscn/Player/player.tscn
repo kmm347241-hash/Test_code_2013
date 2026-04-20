@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://tscn/Player/Player_script/player.gd" type="Script" id=1]
-[ext_resource path="res://art/Player_image/Idle.png" type="Texture" id=2]
+[ext_resource path="res://art/Player_image/vecteezy_sweet-little-cat-sitting-on-transparent-background_53317080.png" type="Texture" id=2]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Idle",
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -23,10 +23,9 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 4, 4 )
-frames = SubResource( 1 )
-animation = "Idle"
-offset = Vector2( 1.19, 0 )
+position = Vector2( 3, -1.75 )
+scale = Vector2( 0.0293333, 0.0298333 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 4, 4 )
