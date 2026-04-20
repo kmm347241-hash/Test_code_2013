@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tscn/Player/Player_script/player.gd" type="Script" id=1]
+[ext_resource path="res://art/Player_image/Idle.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.25
+height = 12.0
+
+[node name="Player" type="Area2D"]
+position = Vector2( 252, 422 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "Idle"
+offset = Vector2( 1.19, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 4, 4 )
+shape = SubResource( 2 )
